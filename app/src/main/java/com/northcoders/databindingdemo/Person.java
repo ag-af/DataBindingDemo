@@ -1,5 +1,6 @@
 package com.northcoders.databindingdemo;
 
+import androidx.annotation.NonNull;
 import androidx.databinding.BaseObservable;
 import androidx.databinding.Bindable;
 
@@ -12,6 +13,12 @@ public class Person extends BaseObservable {
         this.name = name;
         this.age = age;
         this.email = email;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return this.name + ", " + this.age + ", " + this.email;
     }
 
     @Bindable
