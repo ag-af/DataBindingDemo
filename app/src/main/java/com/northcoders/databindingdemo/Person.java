@@ -5,10 +5,10 @@ import androidx.databinding.Bindable;
 
 public class Person extends BaseObservable {
     private String name;
-    private int age;
+    private Integer age;
     private String email;
 
-    public Person(String name, int age, String email) {
+    public Person(String name, Integer age, String email) {
         this.name = name;
         this.age = age;
         this.email = email;
@@ -21,6 +21,9 @@ public class Person extends BaseObservable {
 
     @Bindable
     public String getAge() {
+        if(age==null){
+            return null;
+        }
         return String.valueOf(age);
     }
 
@@ -34,11 +37,17 @@ public class Person extends BaseObservable {
         notifyPropertyChanged(BR.name);
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setAge(String age) {
+        try{
+            this.age = Integer.parseInt(age);
+        } catch (NumberFormatException e){
+            this.age = null;
+        }
+        notifyPropertyChanged(BR.age);
     }
 
     public void setEmail(String email) {
         this.email = email;
+        notifyPropertyChanged(BR.email);
     }
 }
