@@ -29,28 +29,28 @@
         app:layout_constraintVertical_bias="0.404"
         tools:text="PLACEHOLDER TET" />
 
-<!--    <TextView-->
-<!--        android:id="@+id/age"-->
-<!--        android:layout_width="63dp"-->
-<!--        android:layout_height="14dp"-->
-<!--        android:text="@{person.age}"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        tools:text="PLACEHOLDER TEXT" />-->
+    <TextView
+        android:id="@+id/age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{person.age}"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="PLACEHOLDER TEXT" />
 
-<!--    <TextView-->
-<!--        android:id="@+id/email"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="@{person.email}"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.672"-->
-<!--        tools:text="PLACEHOLDER TEXT" />-->
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{person.email}"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.672"
+        tools:text="PLACEHOLDER TEXT" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
     </layout>

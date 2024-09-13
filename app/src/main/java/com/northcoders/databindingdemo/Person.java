@@ -20,8 +20,8 @@ public class Person extends BaseObservable {
     }
 
     @Bindable
-    public int getAge() {
-        return age;
+    public String getAge() {
+        return String.valueOf(age);
     }
 
     @Bindable
