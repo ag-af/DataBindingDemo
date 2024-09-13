@@ -1,9 +1,12 @@
 package com.northcoders.databindingdemo;
 
-public class Person {
-    String name;
-    int age;
-    String email;
+import androidx.databinding.BaseObservable;
+import androidx.databinding.Bindable;
+
+public class Person extends BaseObservable {
+    private String name;
+    private int age;
+    private String email;
 
     public Person(String name, int age, String email) {
         this.name = name;
@@ -11,20 +14,24 @@ public class Person {
         this.email = email;
     }
 
+    @Bindable
     public String getName() {
         return name;
     }
 
+    @Bindable
     public int getAge() {
         return age;
     }
 
+    @Bindable
     public String getEmail() {
         return email;
     }
 
     public void setName(String name) {
         this.name = name;
+        notifyPropertyChanged(BR.name);
     }
 
     public void setAge(int age) {

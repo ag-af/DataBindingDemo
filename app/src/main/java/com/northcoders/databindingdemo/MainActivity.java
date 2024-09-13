@@ -13,12 +13,11 @@ import com.northcoders.databindingdemo.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    ActivityMainBinding activityMainBinding;
+    private ActivityMainBinding activityMainBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -27,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
             return insets;
 
         });
-
+        activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         Person person = new Person("Simon", 18, "simon@northcoders.com");
         activityMainBinding.setPerson(person);
     }
