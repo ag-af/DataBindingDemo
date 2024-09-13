@@ -2,12 +2,15 @@ package com.northcoders.databindingdemo;
 
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
+import android.widget.CompoundButton;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -22,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding activityMainBinding;
     ListView listView;
+    Switch switch1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +54,19 @@ public class MainActivity extends AppCompatActivity {
         ListAdapter adapter = (new ArrayAdapter<>(this, R.layout.activity_main, R.id.name,personList));
         //display
         listView.setAdapter(adapter);
+
+        switch1 = findViewById(R.id.darkModeSwitch);
+
+        switch1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                if (isChecked) {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                } else {
+                    AppCompatDelegate.setDefaultNightMode (AppCompatDelegate.MODE_NIGHT_NO);
+                }
+            }
+        });
 
     }
 }
