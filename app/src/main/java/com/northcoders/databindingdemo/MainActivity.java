@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         personList.add(new Person("Katherine", 12, "katherine@northcoders.com"));
         personList.add(new Person("Bela", 20, "bela@northcoders.com"));
         //adapter to display
-        ListAdapter adapter = (new ArrayAdapter<>(this, R.layout.activity_main, R.id.name,personList));
+        ListAdapter adapter = (new ArrayAdapter<>(this, R.layout.person_list, R.id.listText,personList));
         //display
         listView.setAdapter(adapter);
 

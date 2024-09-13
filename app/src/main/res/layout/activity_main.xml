@@ -18,6 +18,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <include layout="@layout/person_list"/>
 
     <Switch
         android:id="@+id/darkModeSwitch"
@@ -31,20 +32,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.035" />
 
-    <ListView
-        android:id="@+id/person_list"
-        android:layout_width="210dp"
-        android:layout_height="222dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginBottom="2dp"
-        android:dividerHeight="4dp"
-        android:padding="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.07"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/name"
